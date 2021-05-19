@@ -1,5 +1,5 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_cosmetic_app/screens/selectionScreen/selection_item_list.dart';
 
 class SelectionItem extends StatelessWidget {
   final String img;
@@ -16,10 +16,16 @@ class SelectionItem extends StatelessWidget {
             Container(
               height: 200,
               width: double.infinity,
-              child: Image.network(
-                img,
-                height: 100,
-                fit: BoxFit.fitWidth,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed(SelectionItemList.routeName,
+                      arguments: prodType);
+                },
+                child: Image.network(
+                  img,
+                  height: 100,
+                  fit: BoxFit.fitWidth,
+                ),
               ),
             ),
             Positioned(

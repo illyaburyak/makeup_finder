@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cosmetic_app/models/makeup.dart';
-import 'package:flutter_cosmetic_app/screens/selection_screen.dart';
+import 'package:flutter_cosmetic_app/screens/selectionScreen/selection_screen.dart';
 
 import 'package:provider/provider.dart';
 
-import '../widgets/list_home_makeups.dart';
+import 'homeWidgets/list_home_makeups.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeNmae = '/home-page';
@@ -58,8 +58,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             child: GridView.builder(
               gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 400,
-                // childAspectRatio: 2 / 2,
+                maxCrossAxisExtent: 250,
+                childAspectRatio: 2 / 3,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
               ),

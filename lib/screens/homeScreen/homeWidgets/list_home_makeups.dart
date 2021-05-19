@@ -29,30 +29,30 @@ class ListHomeMakeUps extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
             ),
-            height: 40,
+            height: 20,
             child: Text(
-              makeUps.name.toUpperCase(),
+              '${makeUps.name.substring(10).toUpperCase()}',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 18,
+                fontSize: 15,
               ),
               overflow: TextOverflow.fade,
             ),
           ),
           footer: Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: EdgeInsets.symmetric(horizontal: 5),
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
             ),
             child: GridTileBar(
@@ -65,16 +65,7 @@ class ListHomeMakeUps extends StatelessWidget {
                   fontSize: 15,
                 ),
               ),
-              title: Text(
-                '${makeUps.name}',
-                // style: TextStyle(color: Colors.black),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-              ),
+
               trailing: Text(
                 '${makeUps.price.toString()}\$',
                 style: TextStyle(

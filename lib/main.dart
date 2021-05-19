@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cosmetic_app/screens/home_screen.dart';
+import 'package:flutter_cosmetic_app/screens/homeScreen/home_screen.dart';
 import 'package:flutter_cosmetic_app/screens/makeup_details_screen.dart';
-import 'package:flutter_cosmetic_app/screens/selection_screen.dart';
+import 'package:flutter_cosmetic_app/screens/selectionScreen/selection_item_list.dart';
+import 'package:flutter_cosmetic_app/screens/selectionScreen/selection_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'models/makeup.dart';
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
           ProfileScreen.routeName: (ctx) => ProfileScreen(),
           MakeupDetailsScreen.routeName: (ctx) => MakeupDetailsScreen(),
           SelectionScreen.routeName: (ctx) => SelectionScreen(),
+          SelectionItemList.routeName: (ctx) => SelectionItemList(),
         },
       ),
     );

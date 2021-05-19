@@ -25,7 +25,7 @@ class MakeupDetailsScreen extends StatelessWidget {
                 onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.favorite_border),
+                icon: Icon(Icons.thumb_down),
                 onPressed: () {},
               ),
             ],
@@ -56,17 +56,32 @@ class MakeupDetailsScreen extends StatelessWidget {
                       ),
                       Divider(height: 30),
                       Container(
+                        padding: EdgeInsets.all(10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            InkWell(
-                              onTap: () {},
-                              child: Text(
-                                'See More like this',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                InkWell(
+                                  onTap: () {},
+                                  child: Text(
+                                    'See More like this',
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                ),
+                                InkWell(
+                                  onTap: () {},
+                                  child: Text(
+                                    'Comments',
+                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                )
+                              ],
                             ),
                             Container(
                               height: 200,
@@ -162,9 +177,8 @@ class MakeupDetailsScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             FittedBox(
-                              fit: BoxFit.fitWidth,
                               child: Text(
-                                '${productData.name.substring(13)}',
+                                '${productData.name.substring(10)}',
                                 softWrap: true,
                                 style: TextStyle(
                                   color: Colors.white,
